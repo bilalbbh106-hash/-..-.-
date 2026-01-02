@@ -3,51 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ماسكي - متجر الأكواد والخدمات الرقمي</title>
+    <title>ماسكي - متجر الأكواد والإشعارات</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- كود A-ADS -->
-    <script data-a-ads type="text/javascript">
-        // كود A-ADS سيتم وضعه هنا
-    </script>
 </head>
 <body>
-    <!-- شاشة التحميل -->
-    <div class="loading-screen">
-        <div class="loader">
-            <div class="maski-logo-loader">
-                <span class="maski-text">ماسكي</span>
-                <div class="fire-icon"></div>
-            </div>
-            <div class="progress-bar">
-                <div class="progress"></div>
-            </div>
-        </div>
-    </div>
-
     <!-- شريط التنقل العلوي -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <h1><span class="maski-logo">ماسكي</span></h1>
-                <div class="sub-logo">متجر الأكواد والخدمات الرقمية</div>
+                <h1 class="logo-text" id="maski-logo">ماسكي</h1>
+                <div class="logo-animation"></div>
             </div>
             
             <div class="nav-links">
                 <a href="#home" class="nav-link active">الرئيسية</a>
-                <a href="#products" class="nav-link">المنتجات</a>
                 <a href="#categories" class="nav-link">الأقسام</a>
+                <a href="#features" class="nav-link">المميزات</a>
                 <a href="#offers" class="nav-link">العروض</a>
-                <a href="#how-to-buy" class="nav-link">كيفية الشراء</a>
-                <a href="#contact" class="nav-link">اتصل بنا</a>
-                <a href="admin-login.html" class="nav-link admin-link">
-                    <i class="fas fa-lock"></i> لوحة التحكم
-                </a>
+                <div class="nav-link admin-login-btn">
+                    <i class="fas fa-lock"></i> دخول الأدمن
+                </div>
             </div>
             
             <div class="mobile-menu-btn">
@@ -56,227 +37,273 @@
         </div>
     </nav>
 
-    <!-- الأقسام القابلة للسحب أفقيًا -->
+    <!-- قسم الهيرو الرئيسي -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h2 class="hero-title animate-text">مرحباً في <span class="highlight">ماسكي</span></h2>
+                <p class="hero-subtitle">أفضل متجر لأكواد وعروض فري فاير وخدمات التواصل الاجتماعي</p>
+                <div class="hero-buttons">
+                    <a href="#categories" class="btn btn-primary">تصفح الأقسام</a>
+                    <a href="#offers" class="btn btn-secondary">العروض الحصرية</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-element el1"></div>
+                <div class="floating-element el2"></div>
+                <div class="floating-element el3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- أقسام المتجر القابلة للسحب -->
     <section class="categories-section" id="categories">
         <div class="section-header">
-            <h2><span class="section-title">أقسام المتجر</span></h2>
-            <p class="section-subtitle">اختر القسم الذي تريده وانطلق نحو تجربة فريدة</p>
+            <h2 class="section-title">أقسام المتجر</h2>
+            <p class="section-subtitle">اسحب يميناً أو يساراً لتصفح جميع الأقسام</p>
         </div>
         
         <div class="categories-container">
-            <div class="scroll-arrow left-arrow">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-            
-            <div class="categories-wrapper">
-                <div class="categories-track" id="categoriesTrack">
-                    <!-- سيتم إضافة الأقسام ديناميكيًا -->
+            <div class="drag-scroll-wrapper">
+                <div class="categories-scroll" id="categoriesScroll">
+                    <!-- القسم 1: حسابات فري فاير -->
+                    <div class="category-card category-1">
+                        <div class="category-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3 class="category-title">حسابات فري فاير</h3>
+                        <p class="category-description">أفضل حسابات فري فاير بمستويات عالية وأسلحة نادرة</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-user"></i> 150+ حساب</span>
+                            <span><i class="fas fa-star"></i> 4.8 تقييم</span>
+                        </div>
+                        <a href="#freefire" class="btn btn-category">تصفح الآن</a>
+                    </div>
+                    
+                    <!-- القسم 2: عروض الشحن -->
+                    <div class="category-card category-2">
+                        <div class="category-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="category-title">عروض الشحن</h3>
+                        <p class="category-description">أكواد جواهر فري فاير بأسعار منافسة ودفع آمن</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-gem"></i> 500+ كود</span>
+                            <span><i class="fas fa-bolt"></i> توصيل فوري</span>
+                        </div>
+                        <a href="#recharge" class="btn btn-category">اشحن الآن</a>
+                    </div>
+                    
+                    <!-- القسم 3: خدمات التواصل الاجتماعي -->
+                    <div class="category-card category-3">
+                        <div class="category-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3 class="category-title">خدمات التواصل الاجتماعي</h3>
+                        <p class="category-description">تعزيز صفحاتك على جميع منصات التواصل الاجتماعي</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-thumbs-up"></i> 10+ خدمة</span>
+                            <span><i class="fas fa-rocket"></i> نتائج مضمونة</span>
+                        </div>
+                        <a href="#social" class="btn btn-category">اطلب الخدمة</a>
+                    </div>
+                    
+                    <!-- قسم إضافي للعروض الخاصة -->
+                    <div class="category-card category-4">
+                        <div class="category-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3 class="category-title">عروض حصرية</h3>
+                        <p class="category-description">خصومات وعروض لفترة محدودة تنتهي قريباً</p>
+                        <div class="category-stats">
+                            <span><i class="fas fa-clock"></i> تنتهي قريباً</span>
+                            <span><i class="fas fa-percentage"></i> خصم حتى 40%</span>
+                        </div>
+                        <a href="#offers" class="btn btn-category">عرض العروض</a>
+                    </div>
                 </div>
+                
+                <button class="scroll-btn scroll-left">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="scroll-btn scroll-right">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
             </div>
             
-            <div class="scroll-arrow right-arrow">
-                <i class="fas fa-chevron-left"></i>
+            <div class="drag-hint">
+                <i class="fas fa-arrows-left-right"></i> اسحب لتصفح المزيد
             </div>
-        </div>
-        
-        <div class="categories-dots">
-            <!-- سيتم إضافة النقاط ديناميكيًا -->
         </div>
     </section>
 
-    <!-- قسم المنتجات -->
-    <section class="products-section" id="products">
+    <!-- قسم المنتجات والعروض -->
+    <section class="products-section" id="offers">
         <div class="section-header">
-            <h2><span class="section-title">أحدث المنتجات</span></h2>
-            <p class="section-subtitle">اختر ما يناسبك من أكواد وخدمات رقمية</p>
+            <h2 class="section-title">العروض الحالية</h2>
+            <p class="section-subtitle">أفضل العروض المختارة لك</p>
         </div>
         
-        <div class="products-filter">
-            <button class="filter-btn active" data-filter="all">الكل</button>
-            <button class="filter-btn" data-filter="freefire">حسابات فري فاير</button>
-            <button class="filter-btn" data-filter="charging">عروض الشحن</button>
-            <button class="filter-btn" data-filter="social">خدمات التواصل</button>
-        </div>
-        
-        <div class="products-grid" id="productsGrid">
-            <!-- سيتم إضافة المنتجات ديناميكيًا -->
+        <div class="products-container" id="productsContainer">
+            <!-- المنتجات سيتم تحميلها ديناميكياً -->
         </div>
     </section>
 
-    <!-- قسم العروض -->
-    <section class="offers-section" id="offers">
+    <!-- قسم الدفع الآمن -->
+    <section class="payment-section">
         <div class="section-header">
-            <h2><span class="section-title">عروض حصرية</span></h2>
-            <p class="section-subtitle">استفد من عروضنا المميزة واحصل على خصومات كبيرة</p>
+            <h2 class="section-title">دفع آمن وسريع</h2>
+            <p class="section-subtitle">نستخدم بوابة NowPayments للدفع الآمن</p>
         </div>
         
-        <div class="offers-slider">
-            <div class="offer-slide active">
-                <div class="offer-content">
-                    <h3>خصم 20% على أول عملية شراء</h3>
-                    <p>استخدم كود الخصم: MASKI20</p>
-                    <button class="offer-btn">احصل على الخصم الآن</button>
+        <div class="payment-container">
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <div class="payment-icon crypto-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>العملات الرقمية</h3>
+                    <p>دفع بـ Bitcoin, Ethereum, Litecoin وأكثر</p>
                 </div>
-            </div>
-            <div class="offer-slide">
-                <div class="offer-content">
-                    <h3>شراء 2 أكواد واحصل على الثالث مجانًا</h3>
-                    <p>عرض لفترة محدودة فقط</p>
-                    <button class="offer-btn">استفد من العرض</button>
+                
+                <div class="payment-method">
+                    <div class="payment-icon card-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <h3>البطاقات المصرفية</h3>
+                    <p>Visa, Mastercard, American Express</p>
                 </div>
-            </div>
-            <div class="offer-slide">
-                <div class="offer-content">
-                    <h3>شحن مجاني للطلبات فوق 10$</h3>
-                    <p>لجميع أنواع الخدمات</p>
-                    <button class="offer-btn">تسوق الآن</button>
+                
+                <div class="payment-method">
+                    <div class="payment-icon instant-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>توصيل فوري</h3>
+                    <p>استلام الأكواد فوراً بعد الدفع</p>
                 </div>
-            </div>
-        </div>
-        
-        <div class="offers-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
-    </section>
-
-    <!-- كيفية الشراء -->
-    <section class="how-to-buy" id="how-to-buy">
-        <div class="section-header">
-            <h2><span class="section-title">كيفية الشراء</span></h2>
-            <p class="section-subtitle">4 خطوات بسيطة للحصول على منتجك</p>
-        </div>
-        
-        <div class="steps-container">
-            <div class="step">
-                <div class="step-icon">
-                    <i class="fas fa-search"></i>
-                </div>
-                <h3>1. اختر المنتج</h3>
-                <p>تصفح الأقسام واختر المنتج المناسب لك</p>
             </div>
             
-            <div class="step">
-                <div class="step-icon">
-                    <i class="fas fa-shopping-cart"></i>
+            <div class="payment-security">
+                <h3><i class="fas fa-shield-alt"></i> دفع آمن 100%</h3>
+                <p>جميع عمليات الدفع مشفرة ومؤمنة عبر NowPayments</p>
+                <div class="secure-badge">
+                    <i class="fas fa-lock"></i> SSL Secure
                 </div>
-                <h3>2. أضف للسلة</h3>
-                <p>اضغط على زر إضافة إلى السلة</p>
-            </div>
-            
-            <div class="step">
-                <div class="step-icon">
-                    <i class="fas fa-credit-card"></i>
-                </div>
-                <h3>3. ادفع بسهولة</h3>
-                <p>اختر طريقة الدفع المناسبة وأكمل العملية</p>
-            </div>
-            
-            <div class="step">
-                <div class="step-icon">
-                    <i class="fas fa-gift"></i>
-                </div>
-                <h3>4. احصل على الكود</h3>
-                <p>ستحصل على الكود فور اكتمال الدفع</p>
             </div>
         </div>
     </section>
 
-    <!-- الإعلانات -->
-    <section class="ads-section">
-        <div class="ad-container">
-            <div class="ad-placeholder" id="adstera-ad">
-                <!-- إعلان Adstera -->
-            </div>
-        </div>
-    </section>
-
-    <!-- تذييل الصفحة -->
-    <footer class="footer" id="contact">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3 class="footer-logo">ماسكي</h3>
-                <p>متجر رائد في بيع الأكواد والخدمات الرقمية بأفضل الأسعار وأعلى جودة.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-telegram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <!-- فوتر الموقع -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="footer-logo">ماسكي</h2>
+                <p>أفضل متجر لأكواد فري فاير وخدمات التواصل الاجتماعي</p>
+                <div class="social-links">
                     <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             
-            <div class="footer-section">
-                <h4>روابط سريعة</h4>
-                <ul>
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#products">المنتجات</a></li>
-                    <li><a href="#categories">الأقسام</a></li>
-                    <li><a href="#offers">العروض</a></li>
-                    <li><a href="#how-to-buy">كيفية الشراء</a></li>
-                </ul>
+            <div class="footer-links">
+                <h3>روابط سريعة</h3>
+                <a href="#home">الرئيسية</a>
+                <a href="#categories">الأقسام</a>
+                <a href="#offers">العروض</a>
+                <a href="#payment">طرق الدفع</a>
             </div>
             
-            <div class="footer-section">
-                <h4>معلومات الدفع</h4>
-                <ul>
-                    <li>NowPayments بوابة الدفع</li>
-                    <li>البطاقات الائتمانية</li>
-                    <li>Cryptocurrency</li>
-                    <li>دفع عند الاستلام (لمحدد)</li>
-                </ul>
-            </div>
-            
-            <div class="footer-section">
-                <h4>اتصل بنا</h4>
-                <ul>
-                    <li><i class="fas fa-envelope"></i> info@maski-store.com</li>
-                    <li><i class="fas fa-phone"></i> +966 123 456 789</li>
-                    <li><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية</li>
-                </ul>
+            <div class="footer-contact">
+                <h3>الدعم الفني</h3>
+                <p><i class="fas fa-envelope"></i> support@masky.store</p>
+                <p><i class="fas fa-headset"></i> 24/7 دعم فني</p>
+                <p><i class="fas fa-shield-alt"></i> ضمان استعادة الأموال</p>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>جميع الحقوق محفوظة &copy; 2026 ماسكي. تم التطوير بحب ❤️</p>
+            <p>© 2026 ماسكي. جميع الحقوق محفوظة.</p>
+            <div class="ads-placeholder" id="adstera-footer">
+                <!-- كود Adstera الإعلاني -->
+            </div>
         </div>
     </footer>
 
-    <!-- سلة التسوق العائمة -->
-    <div class="floating-cart">
-        <div class="cart-icon">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-count">0</span>
+    <!-- نافذة تسجيل دخول الأدمن -->
+    <div class="admin-modal" id="adminModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>دخول لوحة التحكم</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="adminLoginForm">
+                    <div class="input-group">
+                        <label for="adminPassword">كلمة المرور</label>
+                        <input type="password" id="adminPassword" placeholder="أدخل كلمة المرور" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">دخول</button>
+                </form>
+            </div>
         </div>
     </div>
 
-    <!-- نموذج سلة التسوق -->
-    <div class="cart-modal">
-        <div class="cart-modal-content">
-            <div class="cart-header">
-                <h3>سلة التسوق</h3>
-                <button class="close-cart">&times;</button>
+    <!-- نافذة شراء المنتج -->
+    <div class="purchase-modal" id="purchaseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>إكمال عملية الشراء</h3>
+                <button class="close-purchase-modal">&times;</button>
             </div>
-            <div class="cart-items">
-                <!-- سيتم إضافة العناصر هنا -->
-            </div>
-            <div class="cart-footer">
-                <div class="cart-total">
-                    <span>المجموع:</span>
-                    <span class="total-price">$0.00</span>
+            <div class="modal-body">
+                <div id="purchaseDetails"></div>
+                <div class="payment-options">
+                    <h4>اختر طريقة الدفع:</h4>
+                    <div class="payment-options-list">
+                        <button class="payment-option" data-method="crypto">
+                            <i class="fas fa-coins"></i> عملات رقمية
+                        </button>
+                        <button class="payment-option" data-method="card">
+                            <i class="fas fa-credit-card"></i> بطاقة ائتمان
+                        </button>
+                    </div>
                 </div>
-                <button class="checkout-btn">إتمام الشراء</button>
+                <button class="btn btn-success" id="confirmPurchase">تأكيد الدفع بـ NowPayments</button>
             </div>
         </div>
     </div>
 
+    <!-- أماكن الإعلانات -->
+    <div class="ads-container top-ad">
+        <div class="ads-placeholder" id="a-ads-header">
+            <!-- كود A-ADS الإعلاني -->
+        </div>
+    </div>
+    
+    <div class="ads-container sidebar-ad">
+        <div class="ads-placeholder" id="a-ads-sidebar">
+            <!-- كود A-ADS الإعلاني -->
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/drag-scroll.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/products.js"></script>
-    <script src="js/categories.js"></script>
-    <script src="js/cart.js"></script>
-    <!-- كود Adstera -->
-    <script type="text/javascript">
-        // كود Adstera سيتم وضعه هنا
+    <script src="js/payments.js"></script>
+    <script>
+        // كود Supabase
+        const SUPABASE_URL = 'https://your-project.supabase.co';
+        const SUPABASE_KEY = 'your-anon-key';
+        
+        // كود A-ADS
+        const aAdsCode = `<!-- كود A-ADS -->`;
+        
+        // كود Adstera
+        const adsteraCode = `<!-- كود Adstera -->`;
+        
+        // تهيئة Supabase (يتم وضع الكود الفعلي في ملف js منفصل)
     </script>
 </body>
-</html>
+    </html>
