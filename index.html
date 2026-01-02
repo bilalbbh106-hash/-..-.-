@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماسكي - متجر الأكواد والخدمات الرقمي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Noto+Kufi+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- كود A-ADS -->
+    <script data-a-ads type="text/javascript">
+        // كود A-ADS سيتم وضعه هنا
+    </script>
+</head>
+<body>
+    <!-- شاشة التحميل -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="maski-logo-loader">
+                <span class="maski-text">ماسكي</span>
+                <div class="fire-icon"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><span class="maski-logo">ماسكي</span></h1>
+                <div class="sub-logo">متجر الأكواد والخدمات الرقمية</div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">الرئيسية</a>
+                <a href="#products" class="nav-link">المنتجات</a>
+                <a href="#categories" class="nav-link">الأقسام</a>
+                <a href="#offers" class="nav-link">العروض</a>
+                <a href="#how-to-buy" class="nav-link">كيفية الشراء</a>
+                <a href="#contact" class="nav-link">اتصل بنا</a>
+                <a href="admin-login.html" class="nav-link admin-link">
+                    <i class="fas fa-lock"></i> لوحة التحكم
+                </a>
+            </div>
+            
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- الأقسام القابلة للسحب أفقيًا -->
+    <section class="categories-section" id="categories">
+        <div class="section-header">
+            <h2><span class="section-title">أقسام المتجر</span></h2>
+            <p class="section-subtitle">اختر القسم الذي تريده وانطلق نحو تجربة فريدة</p>
+        </div>
+        
+        <div class="categories-container">
+            <div class="scroll-arrow left-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            
+            <div class="categories-wrapper">
+                <div class="categories-track" id="categoriesTrack">
+                    <!-- سيتم إضافة الأقسام ديناميكيًا -->
+                </div>
+            </div>
+            
+            <div class="scroll-arrow right-arrow">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+        </div>
+        
+        <div class="categories-dots">
+            <!-- سيتم إضافة النقاط ديناميكيًا -->
+        </div>
+    </section>
+
+    <!-- قسم المنتجات -->
+    <section class="products-section" id="products">
+        <div class="section-header">
+            <h2><span class="section-title">أحدث المنتجات</span></h2>
+            <p class="section-subtitle">اختر ما يناسبك من أكواد وخدمات رقمية</p>
+        </div>
+        
+        <div class="products-filter">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="freefire">حسابات فري فاير</button>
+            <button class="filter-btn" data-filter="charging">عروض الشحن</button>
+            <button class="filter-btn" data-filter="social">خدمات التواصل</button>
+        </div>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- سيتم إضافة المنتجات ديناميكيًا -->
+        </div>
+    </section>
+
+    <!-- قسم العروض -->
+    <section class="offers-section" id="offers">
+        <div class="section-header">
+            <h2><span class="section-title">عروض حصرية</span></h2>
+            <p class="section-subtitle">استفد من عروضنا المميزة واحصل على خصومات كبيرة</p>
+        </div>
+        
+        <div class="offers-slider">
+            <div class="offer-slide active">
+                <div class="offer-content">
+                    <h3>خصم 20% على أول عملية شراء</h3>
+                    <p>استخدم كود الخصم: MASKI20</p>
+                    <button class="offer-btn">احصل على الخصم الآن</button>
+                </div>
+            </div>
+            <div class="offer-slide">
+                <div class="offer-content">
+                    <h3>شراء 2 أكواد واحصل على الثالث مجانًا</h3>
+                    <p>عرض لفترة محدودة فقط</p>
+                    <button class="offer-btn">استفد من العرض</button>
+                </div>
+            </div>
+            <div class="offer-slide">
+                <div class="offer-content">
+                    <h3>شحن مجاني للطلبات فوق 10$</h3>
+                    <p>لجميع أنواع الخدمات</p>
+                    <button class="offer-btn">تسوق الآن</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="offers-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- كيفية الشراء -->
+    <section class="how-to-buy" id="how-to-buy">
+        <div class="section-header">
+            <h2><span class="section-title">كيفية الشراء</span></h2>
+            <p class="section-subtitle">4 خطوات بسيطة للحصول على منتجك</p>
+        </div>
+        
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h3>1. اختر المنتج</h3>
+                <p>تصفح الأقسام واختر المنتج المناسب لك</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <h3>2. أضف للسلة</h3>
+                <p>اضغط على زر إضافة إلى السلة</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h3>3. ادفع بسهولة</h3>
+                <p>اختر طريقة الدفع المناسبة وأكمل العملية</p>
+            </div>
+            
+            <div class="step">
+                <div class="step-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3>4. احصل على الكود</h3>
+                <p>ستحصل على الكود فور اكتمال الدفع</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- الإعلانات -->
+    <section class="ads-section">
+        <div class="ad-container">
+            <div class="ad-placeholder" id="adstera-ad">
+                <!-- إعلان Adstera -->
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer class="footer" id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-logo">ماسكي</h3>
+                <p>متجر رائد في بيع الأكواد والخدمات الرقمية بأفضل الأسعار وأعلى جودة.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#products">المنتجات</a></li>
+                    <li><a href="#categories">الأقسام</a></li>
+                    <li><a href="#offers">العروض</a></li>
+                    <li><a href="#how-to-buy">كيفية الشراء</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>معلومات الدفع</h4>
+                <ul>
+                    <li>NowPayments بوابة الدفع</li>
+                    <li>البطاقات الائتمانية</li>
+                    <li>Cryptocurrency</li>
+                    <li>دفع عند الاستلام (لمحدد)</li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>اتصل بنا</h4>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@maski-store.com</li>
+                    <li><i class="fas fa-phone"></i> +966 123 456 789</li>
+                    <li><i class="fas fa-map-marker-alt"></i> المملكة العربية السعودية</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 ماسكي. تم التطوير بحب ❤️</p>
+        </div>
+    </footer>
+
+    <!-- سلة التسوق العائمة -->
+    <div class="floating-cart">
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+    </div>
+
+    <!-- نموذج سلة التسوق -->
+    <div class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h3>سلة التسوق</h3>
+                <button class="close-cart">&times;</button>
+            </div>
+            <div class="cart-items">
+                <!-- سيتم إضافة العناصر هنا -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>المجموع:</span>
+                    <span class="total-price">$0.00</span>
+                </div>
+                <button class="checkout-btn">إتمام الشراء</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/categories.js"></script>
+    <script src="js/cart.js"></script>
+    <!-- كود Adstera -->
+    <script type="text/javascript">
+        // كود Adstera سيتم وضعه هنا
+    </script>
+</body>
+</html>
