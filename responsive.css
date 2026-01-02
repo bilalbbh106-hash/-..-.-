@@ -1,0 +1,268 @@
+/* التصميم المتجاوب */
+@media (max-width: 1200px) {
+    .hero-container {
+        max-width: 1000px;
+    }
+    
+    .categories-container, .products-container, .payment-container, .footer-container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .hero-image {
+        height: 300px;
+        order: -1;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 15, 30, 0.98);
+        padding: 2rem;
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(106, 17, 203, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .sidebar-ad {
+        display: none;
+    }
+    
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .category-card {
+        min-width: 280px;
+    }
+    
+    .payment-methods {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .modal-content {
+        width: 95%;
+    }
+    
+    .scroll-btn {
+        display: none;
+    }
+    
+    .nav-container, .hero, .categories-section, .products-section, .payment-section, .footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .category-card {
+        min-width: 260px;
+        padding: 1.5rem;
+    }
+    
+    .product-card {
+        min-width: 100%;
+    }
+    
+    .payment-options-list {
+        flex-direction: column;
+    }
+    
+    #maski-logo {
+        font-size: 2rem;
+    }
+    
+    .hero-image .floating-element {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .floating-element.el2 {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .floating-element.el3 {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 400px) {
+    .category-card {
+        min-width: 240px;
+    }
+    
+    .hero-buttons .btn {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .category-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* دعم الأجهزة اللوحية */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-image {
+        height: 400px;
+    }
+    
+    .products-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape) {
+    .hero-container {
+        gap: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+}
+
+/* دعم الشاشات عالية الدقة */
+@media (min-width: 1920px) {
+    .nav-container, .hero-container, .categories-container, 
+    .products-container, .payment-container, .footer-container {
+        max-width: 1600px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .category-card {
+        min-width: 350px;
+    }
+    
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+
+/* دعم الوضع المظلم/فاتح تلقائياً */
+@media (prefers-color-scheme: light) {
+    :root {
+        --light-color: #1a1a2e;
+        --dark-color: #f8f9fa;
+        --text-color: #333;
+    }
+    
+    body {
+        background-color: #f0f2f5;
+        color: var(--text-color);
+        background-image: 
+            radial-gradient(circle at 10% 20%, rgba(106, 17, 203, 0.05) 0%, transparent 20%),
+            radial-gradient(circle at 90% 80%, rgba(37, 117, 252, 0.05) 0%, transparent 20%);
+    }
+    
+    .navbar, .category-card, .product-card, .payment-method,
+    .payment-security, .modal-content, .ads-placeholder {
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--text-color);
+    }
+    
+    .footer {
+        background: rgba(240, 240, 245, 0.95);
+    }
+    
+    .nav-link, .footer-links a, .footer-contact p {
+        color: var(--text-color);
+    }
+    
+    .nav-link:hover, .nav-link.active {
+        color: var(--accent-color);
+    }
+    
+    .hero-subtitle, .section-subtitle, .category-description,
+    .product-description, .drag-hint, .footer-bottom {
+        color: #666;
+    }
+}
+
+/* دعم الطباعة */
+@media print {
+    .navbar, .hero-buttons, .admin-login-btn, .scroll-btn,
+    .btn-buy, .payment-options, .ads-container, .social-links,
+    .footer-bottom .ads-placeholder {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .hero, .categories-section, .products-section, .payment-section, .footer {
+        padding: 1rem 0 !important;
+    }
+}
