@@ -4,16 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ماسكي - متجر الأكواد والإشعارات</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- الخطوط -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ملفات CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- الخط العربي الخاص (إذا عندك ملف الخط) -->
+    <style>
+        @font-face {
+            font-family: 'MaskiFont';
+            src: url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+        }
+        
+        .logo-text {
+            font-family: 'Amiri', 'Cairo', serif;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body>
-    <!-- شريط التنقل العلوي -->
+    <!-- شريط التنقل -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -24,7 +41,6 @@
             <div class="nav-links">
                 <a href="#home" class="nav-link active">الرئيسية</a>
                 <a href="#categories" class="nav-link">الأقسام</a>
-                <a href="#features" class="nav-link">المميزات</a>
                 <a href="#offers" class="nav-link">العروض</a>
                 <div class="nav-link admin-login-btn">
                     <i class="fas fa-lock"></i> دخول الأدمن
@@ -37,11 +53,11 @@
         </div>
     </nav>
 
-    <!-- قسم الهيرو الرئيسي -->
+    <!-- قسم الهيرو -->
     <section class="hero" id="home">
         <div class="hero-container">
             <div class="hero-content">
-                <h2 class="hero-title animate-text">مرحباً في <span class="highlight">ماسكي</span></h2>
+                <h2 class="hero-title">مرحباً في <span class="highlight">ماسكي</span></h2>
                 <p class="hero-subtitle">أفضل متجر لأكواد وعروض فري فاير وخدمات التواصل الاجتماعي</p>
                 <div class="hero-buttons">
                     <a href="#categories" class="btn btn-primary">تصفح الأقسام</a>
@@ -56,7 +72,7 @@
         </div>
     </section>
 
-    <!-- أقسام المتجر القابلة للسحب -->
+    <!-- الأقسام القابلة للسحب -->
     <section class="categories-section" id="categories">
         <div class="section-header">
             <h2 class="section-title">أقسام المتجر</h2>
@@ -66,7 +82,7 @@
         <div class="categories-container">
             <div class="drag-scroll-wrapper">
                 <div class="categories-scroll" id="categoriesScroll">
-                    <!-- القسم 1: حسابات فري فاير -->
+                    <!-- قسم 1 -->
                     <div class="category-card category-1">
                         <div class="category-icon">
                             <i class="fas fa-fire"></i>
@@ -80,7 +96,7 @@
                         <a href="#freefire" class="btn btn-category">تصفح الآن</a>
                     </div>
                     
-                    <!-- القسم 2: عروض الشحن -->
+                    <!-- قسم 2 -->
                     <div class="category-card category-2">
                         <div class="category-icon">
                             <i class="fas fa-bolt"></i>
@@ -94,7 +110,7 @@
                         <a href="#recharge" class="btn btn-category">اشحن الآن</a>
                     </div>
                     
-                    <!-- القسم 3: خدمات التواصل الاجتماعي -->
+                    <!-- قسم 3 -->
                     <div class="category-card category-3">
                         <div class="category-icon">
                             <i class="fas fa-share-alt"></i>
@@ -108,7 +124,7 @@
                         <a href="#social" class="btn btn-category">اطلب الخدمة</a>
                     </div>
                     
-                    <!-- قسم إضافي للعروض الخاصة -->
+                    <!-- قسم 4 -->
                     <div class="category-card category-4">
                         <div class="category-icon">
                             <i class="fas fa-crown"></i>
@@ -130,14 +146,10 @@
                     <i class="fas fa-chevron-left"></i>
                 </button>
             </div>
-            
-            <div class="drag-hint">
-                <i class="fas fa-arrows-left-right"></i> اسحب لتصفح المزيد
-            </div>
         </div>
     </section>
 
-    <!-- قسم المنتجات والعروض -->
+    <!-- المنتجات -->
     <section class="products-section" id="offers">
         <div class="section-header">
             <h2 class="section-title">العروض الحالية</h2>
@@ -145,11 +157,11 @@
         </div>
         
         <div class="products-container" id="productsContainer">
-            <!-- المنتجات سيتم تحميلها ديناميكياً -->
+            <!-- المنتجات تضاف بالجافاسكريبت -->
         </div>
     </section>
 
-    <!-- قسم الدفع الآمن -->
+    <!-- الدفع -->
     <section class="payment-section">
         <div class="section-header">
             <h2 class="section-title">دفع آمن وسريع</h2>
@@ -182,128 +194,86 @@
                     <p>استلام الأكواد فوراً بعد الدفع</p>
                 </div>
             </div>
-            
-            <div class="payment-security">
-                <h3><i class="fas fa-shield-alt"></i> دفع آمن 100%</h3>
-                <p>جميع عمليات الدفع مشفرة ومؤمنة عبر NowPayments</p>
-                <div class="secure-badge">
-                    <i class="fas fa-lock"></i> SSL Secure
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- فوتر الموقع -->
+    <!-- الفوتر -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">
                 <h2 class="footer-logo">ماسكي</h2>
                 <p>أفضل متجر لأكواد فري فاير وخدمات التواصل الاجتماعي</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-telegram"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-links">
-                <h3>روابط سريعة</h3>
-                <a href="#home">الرئيسية</a>
-                <a href="#categories">الأقسام</a>
-                <a href="#offers">العروض</a>
-                <a href="#payment">طرق الدفع</a>
-            </div>
-            
-            <div class="footer-contact">
-                <h3>الدعم الفني</h3>
-                <p><i class="fas fa-envelope"></i> support@masky.store</p>
-                <p><i class="fas fa-headset"></i> 24/7 دعم فني</p>
-                <p><i class="fas fa-shield-alt"></i> ضمان استعادة الأموال</p>
             </div>
         </div>
         
         <div class="footer-bottom">
             <p>© 2026 ماسكي. جميع الحقوق محفوظة.</p>
-            <div class="ads-placeholder" id="adstera-footer">
-                <!-- كود Adstera الإعلاني -->
-            </div>
         </div>
     </footer>
 
-    <!-- نافذة تسجيل دخول الأدمن -->
-    <div class="admin-modal" id="adminModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>دخول لوحة التحكم</h3>
-                <button class="close-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form id="adminLoginForm">
-                    <div class="input-group">
-                        <label for="adminPassword">كلمة المرور</label>
-                        <input type="password" id="adminPassword" placeholder="أدخل كلمة المرور" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary">دخول</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- نافذة شراء المنتج -->
-    <div class="purchase-modal" id="purchaseModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>إكمال عملية الشراء</h3>
-                <button class="close-purchase-modal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div id="purchaseDetails"></div>
-                <div class="payment-options">
-                    <h4>اختر طريقة الدفع:</h4>
-                    <div class="payment-options-list">
-                        <button class="payment-option" data-method="crypto">
-                            <i class="fas fa-coins"></i> عملات رقمية
-                        </button>
-                        <button class="payment-option" data-method="card">
-                            <i class="fas fa-credit-card"></i> بطاقة ائتمان
-                        </button>
-                    </div>
-                </div>
-                <button class="btn btn-success" id="confirmPurchase">تأكيد الدفع بـ NowPayments</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- أماكن الإعلانات -->
-    <div class="ads-container top-ad">
-        <div class="ads-placeholder" id="a-ads-header">
-            <!-- كود A-ADS الإعلاني -->
-        </div>
-    </div>
-    
-    <div class="ads-container sidebar-ad">
-        <div class="ads-placeholder" id="a-ads-sidebar">
-            <!-- كود A-ADS الإعلاني -->
-        </div>
-    </div>
-
-    <!-- Scripts -->
+    <!-- ملفات JavaScript -->
     <script src="js/drag-scroll.js"></script>
     <script src="js/main.js"></script>
     <script src="js/payments.js"></script>
+    
+    <!-- تهيئة الموقع -->
     <script>
-        // كود Supabase
-        const SUPABASE_URL = 'https://your-project.supabase.co';
-        const SUPABASE_KEY = 'your-anon-key';
-        
-        // كود A-ADS
-        const aAdsCode = `<!-- كود A-ADS -->`;
-        
-        // كود Adstera
-        const adsteraCode = `<!-- كود Adstera -->`;
-        
-        // تهيئة Supabase (يتم وضع الكود الفعلي في ملف js منفصل)
+        // تهيئة أولية
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحميل المنتجات
+            const products = [
+                {
+                    id: 1,
+                    title: "كود 1000 جوهرة فري فاير",
+                    description: "كود لشراء 1000 جوهرة في لعبة فري فاير",
+                    price: 1.10,
+                    category: "recharge",
+                    badge: "الأكثر مبيعاً"
+                },
+                {
+                    id: 2,
+                    title: "حساب فري فاير مستوى 70",
+                    description: "حساب بمستوى عالي وأسلحة نادرة",
+                    price: 15.99,
+                    category: "freefire",
+                    badge: "حصري"
+                }
+            ];
+            
+            const container = document.getElementById('productsContainer');
+            if (container) {
+                products.forEach(product => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.innerHTML = `
+                        <div class="product-image">
+                            <div class="product-badge">${product.badge}</div>
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">${product.title}</h3>
+                            <p class="product-description">${product.description}</p>
+                            <div class="product-price">$${product.price}</div>
+                            <button class="btn btn-buy">شراء الآن</button>
+                        </div>
+                    `;
+                    container.appendChild(card);
+                });
+            }
+            
+            // تأثيرات التمرير
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
     </script>
 </body>
     </html>
